@@ -1,0 +1,17 @@
+// 1. Bootstrap 必要基礎功能
+@import 'bootstrap/scss/functions';
+
+// 2. 客製變數
+@import './variables';
+
+// 3. Bootstrap 主程式（會吃上方變數）
+@import 'bootstrap/scss/bootstrap';
+
+// 4. 客製模組（順序依賴性低的放前面）
+@import './base';
+@import './typography';
+@import './spacing';
+@import './colors';
+@import './utilities';
+@import './components';
+@import 'bootstrap-icons/font/bootstrap-icons.css';

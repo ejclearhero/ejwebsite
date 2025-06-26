@@ -1,0 +1,295 @@
+.logo-img {
+  width: 140px; /* 預設手機寬度 */
+  height: auto;
+
+  @media (min-width: 768px) {
+    .logo-img {
+      width: 180px; /* 平板 */
+    }
+  }
+  @media (min-width: 992px) {
+    .logo-img {
+      width: 220px; /* 桌機 */
+    }
+  }
+}
+// Hero 區
+.hero-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+
+  // 不同裝置對應高度
+  height: 360px;
+
+  @media (min-width: 768px) {
+    height: 460px;
+  }
+
+  @media (min-width: 992px) {
+    height: 520px;
+  }
+  // 加入遮罩層
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+  .container {  
+    position: relative;
+    z-index: 2;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .svg-title {
+      width: 350px;
+
+      @media (min-width: 768px) {
+        width: 400px;
+      }
+
+      @media (min-width: 992px) {
+        width: 560px;
+      }
+    }
+
+    .svg-subtitle {
+      width: 290px;
+
+      @media (min-width: 768px) {
+        width: 360px;
+      }
+
+      @media (min-width: 992px) {
+        width: 500px;
+      }
+    }
+
+    .svg-qr {
+      width: 120px;
+
+      @media (min-width: 768px) {
+        width: 160px;
+      }
+
+      @media (min-width: 992px) {
+        width: 200px;
+      }
+    }
+  }
+  // .hero-content {
+  //   position: relative;
+  //   z-index: 2;
+  //   padding: 0 1rem; // 手機留白
+
+  //   .hero-title {
+  //     font-weight: 800;
+  //     font-size: 24px; // 20px
+  //     line-height: 1.4;
+
+  //     @media (min-width: 768px) {
+  //       font-size: 28px;
+  //     }
+
+  //     @media (min-width: 992px) {
+  //       font-size: 40px; // 36px
+  //     }
+  //   }
+
+  //   .hero-subtitle {
+  //     font-weight: 500;
+  //     font-size: 16px;  //14
+  //     line-height: 1.4;
+
+  //     @media (min-width: 768px) {
+  //       font-size: 18px; //16
+  //     }
+
+  //     @media (min-width: 992px) {
+  //       font-size: 22px; //18
+  //     }
+  //   }
+  // }
+}
+
+// About 區｜socialIcon
+.about-social {
+  .social-icon {
+    color: $text-body;
+    .bi {
+      font-size: $h3-font-size;
+    }
+    @media (min-width: 768px) {
+      .bi {
+      font-size: $h2-font-size;
+    }
+    }
+  }
+}
+
+// 服務流程
+.flow-step {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  @media (min-width: 768px){
+    width: 100%;
+  }
+
+  .step-icon {
+    width: 70px;
+    height: auto;
+    position: absolute;
+    bottom: 3.7rem;
+    left: 1rem;
+    z-index: 10;
+
+    @media (min-width: 768px) {
+      width: 60px;
+      bottom: 3.5rem;
+    }
+    @media (min-width: 992px) {
+      width: 60px;
+      bottom: 4rem;
+    }
+  }
+  .icon-wrapper {
+    background-color: $gray-100;
+    border-radius: 1.5rem 0 0 0;
+    padding: 3rem;
+    overflow: hidden;
+    position: relative;
+  } 
+  .step-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 20px;
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  .step-number {
+    position: absolute;
+    bottom: -3.5rem;
+    right: 0.5rem;
+    font-size: 6rem;
+    font-weight: 900;
+    color: $gray-200;
+    font-family: 'Noto Sans TC', sans-serif;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+// 服務項目
+.card {
+  &-title {
+    color: $text-body;
+    font-weight: 700;
+  }
+  &-text {
+    color: $text-secondary;
+    font-size: 18px;
+  }
+}
+
+// Emergency
+.emergency-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  // 高度設定
+  height: 400px;
+
+  @media (min-width: 768px) {
+    height: 460px;
+  }
+
+  @media (min-width: 992px) {
+    height: 520px;
+  }
+
+  // 遮罩層（可選）
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .emergency-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .svg-title {
+      width: 250px;
+
+      @media (min-width: 768px) {
+        width: 320px;
+      }
+
+      @media (min-width: 992px) {
+        width: 360px;
+      }
+    }
+
+    .svg-number {
+      width: 220px;
+
+      @media (min-width: 768px) {
+        width: 280px;
+      }
+
+      @media (min-width: 992px) {
+        width: 330px;
+      }
+    }
+
+    .svg-qr {
+      width: 150px;
+
+      @media (min-width: 768px) {
+        width: 190px;
+      }
+
+      @media (min-width: 992px) {
+        width: 200px;
+      }
+    }
+  }
+}
+
+
+.social-icon {
+  color: $white;
+  &:hover {
+    color: $primary;
+  }
+  .bi {
+    font-size: $h3-font-size;
+  }
+}

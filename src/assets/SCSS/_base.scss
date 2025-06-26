@@ -1,0 +1,98 @@
+// ✅ 1. box-sizing 重置（讓所有元素不受邊框、padding 影響尺寸）
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+// ✅ 2. 全站 body 初始設定
+body {
+  font-family: $font-family-base;
+  // font-size: $p-font-size-mobile;
+  font-size: $p-font-size-mobile;
+  line-height: $p-line-height-mobile;
+  color: $text-body;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    font-size: $p-font-size-tablet;
+  }
+
+  @media (min-width: 992px) {
+    font-size: $p-font-size-desktop;
+    line-height: $p-line-height-desktop;
+  }
+}
+
+// ✅ 3. 超連結樣式（自動帶主色並 hover 有效果）
+a {
+  display: inline-block;
+  color: $text-body;
+  text-decoration: none;
+
+  &:hover {
+    // text-decoration: underline;
+    color: $primary;
+  }
+}
+
+// ✅ 4. 圖片預設行為（避免圖超出容器）
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ✅ 5. 清除 ul、ol、li 預設樣式（可視需求調整）
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// ✅ 6. 按鈕 reset（如需搭配 Bootstrap 可選擇略過）
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: $text-body;
+
+  @media (min-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+
+.navbar {
+  .nav-link {
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+    &.active {
+    color: $primary; // 活動中的選單也可強調
+    font-weight: 600;
+  }
+  }
+  &-toggler:focus {
+  box-shadow: 0 0 0 0.1rem;
+  }
+}
+
+// 卡片元件
+.card {
+  &-img-top {
+    height: 330px;
+    object-fit: cover;
+  }
+}
