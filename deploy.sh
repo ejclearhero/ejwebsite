@@ -22,7 +22,7 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
 # 下面是走 ssh 模式
 # git push -f git@github.com:hsiangfeng/HexfootMusic.git main:gh-pages
-git push -f git@github.com:ejclearhero/ejwebsite.git main:gh-pages
+git push -f git@github-ej:ejclearhero/ejwebsite.git main:gh-pages
 # 除此之外，也可以改走 HTTPS 模式
 # git push -f https://github.com/echocarriet/vueLiveWeek6.git main:gh-pages
 
