@@ -9,21 +9,16 @@ npm run build
 # 移動到打包資料夾下，若你有調整的話打包後的資料夾請務必調整
 cd dist
 
+# 加入 CNAME（確保部署會包含它）
+echo 'www.ejclearhero.com' > CNAME
+
 # 部署到自定義網域
 # echo 'www.example.com' > CNAME
 git init
 git add -A
 git commit -m 'deploy'
 
-# 部署到 https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
-
-# 部署到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
-# 下面是走 ssh 模式
-# git push -f git@github.com:hsiangfeng/HexfootMusic.git main:gh-pages
-git push -f git@github-ej:ejclearhero/ejwebsite.git main:gh-pages
-# 除此之外，也可以改走 HTTPS 模式
-# git push -f https://github.com/echocarriet/vueLiveWeek6.git main:gh-pages
+# 將打包結果推送至 gh-pages 分支（注意：這裡使用 HTTPS 模式）
+git push -f https://github.com/ejclearhero/ejwebsite.git main:gh-pages
 
 cd -
