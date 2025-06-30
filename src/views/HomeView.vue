@@ -263,7 +263,7 @@
           <li class="col">
             <div class="card">
               <img src="@/assets/images/serviceItem/serviceItem-排水孔疏通.webp"
-              class="card-img-top object-position-bc" alt="排水孔疏通圖片">
+              class="card-img-top" alt="排水孔疏通圖片">
               <div class="card-body">
                 <h5 class="card-title">排水孔疏通</h5>
                 <p class="card-text">
