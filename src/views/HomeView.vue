@@ -370,18 +370,24 @@
             />
           </div>
           <div class="hotline-number my-4">
-            <img
+            <a href="tel:+0955071230"
+                aria-label="0955071230">
+              <img
               src="@/assets/images/24小時服務熱線_電話.svg"
               alt="0955-071230"
-              class="svg-number"
-            />
+              class="svg-number" />
+            </a>
           </div>
           <div class="qr-code">
-            <img
+            <a href="https://www.google.com/url?q=https%3A%2F%2Fline.me%2Fti%2Fp%2FcpxNoEmFf8&sa=D&sntz=1&usg=AOvVaw0LpE5xN1Jxz6ct_rFMZSOw"
+                class="social-icon"
+                target="_blank"
+                aria-label="加入 LINE">
+              <img
               src="@/assets/images/24小時服務熱線_QRCode.svg"
               alt="LINE QR Code"
-              class="svg-qr"
-            />
+              class="svg-qr" />
+            </a>
           </div>
         </div>
       </div>
