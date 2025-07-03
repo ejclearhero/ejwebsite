@@ -390,11 +390,10 @@
               class="svg-qr" />
             </a>
           </div>
-          <p>點電話直接撥通、點 QR Code 立即加 Line，歡迎隨時聯絡</p>
         </div>
       </div>
     </section>
-    <GoToTop />
+    <CallMeBtn />
   </main>
   <footer class="bg-dark py-6">
     <div class="container text-center">
@@ -453,13 +452,13 @@ import heroImage from '@/assets/images/HeroBanner_01.webp';
 import heroSubtitleDesktop from '@/assets/images/heroSubtitleImage_desktop.svg';
 import heroSubtitleMobile from '@/assets/images/heroSubtitleImage_mobile.svg';
 import emergencyImage from '@/assets/images/emergencyBg_01.webp';
-import GoToTop from '@/components/GoToTop.vue';
+import CallMeBtn from '@/components/CallMeBtn.vue';
 
 export default {
   name: 'HomeView',
   components: {
     NavbarModal,
-    GoToTop,
+    CallMeBtn,
   },
   data() {
     return {
