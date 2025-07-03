@@ -1,5 +1,5 @@
 .logo-img {
-  width: 140px; /* 預設手機寬度 */
+  width: 160px; /* 預設手機寬度 */
   height: auto;
 
   @media (min-width: 768px) {
@@ -122,16 +122,28 @@
 }
 
 // About 區｜socialIcon
-.about-social {
-  .social-icon {
-    color: $text-body;
-    .bi {
-      font-size: $h3-font-size;
-    }
+
+.about {
+  &-text {
+    font-size: 19px;
     @media (min-width: 768px) {
-      .bi {
-      font-size: $h2-font-size;
+      font-size: 18px;
     }
+  }
+
+  &-social {
+    .social-icon {
+      color: $text-body;
+      .bi {
+        // font-size: $h3-font-size;
+        // font-size: $h2-font-size;
+        font-size: 36px;
+      }
+      @media (min-width: 768px) {
+        .bi {
+        font-size: $h2-font-size-desktop;
+      }
+      }
     }
   }
 }
@@ -290,6 +302,7 @@
     color: $primary;
   }
   .bi {
-    font-size: $h3-font-size;
+    font-size: 30px;
+    // font-size: $h3-font-size;
   }
 }

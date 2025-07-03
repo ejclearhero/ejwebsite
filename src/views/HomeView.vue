@@ -57,16 +57,17 @@
     <section id="about" class="bg-gray-100 py-7">
       <div class="container">
         <div class="row row-gap-4">
-          <div class="col-lg-7 ">
+          <div class="col-lg-7">
             <h3 class="section-title">關於亦傑包通專家</h3>
             <h4 class="text-body text-secondary mb-4">EJclearhreo</h4>
-            <p class="text-body mb-3 mb-lg-4">
-              亦傑企業行為政府立案的專業水電工程行，亦以品牌名稱「亦傑包通專家」對外服務，擁有多年實務經驗，專精於水電維修、管路疏通、化糞池清理與各類衛浴工程。
+            <p class="about-text mb-3 mb-lg-4">
+              亦傑企業行為政府立案的專業水電工程行，亦以品牌名稱「亦傑包通專家」對外服務，
+              擁有多年實務經驗，專精於高壓水刀管路疏通清洗、內視鏡管路檢測、水電維修、化糞池清理與各類衛浴工程。
             </p>
-            <p class="text-body mb-0 mb-lg-4">
+            <p class="about-text mb-0 mb-lg-4">
               團隊成員皆受過專業訓練，施工細膩、態度認真，致力提供高品質、可靠的工程服務。
-              設備齊全、技術成熟，無論是居家修繕或商家、機關的定期合作，我們皆能迅速應對、有效解決問題。堅持合理收費、誠信服務，一通電話即可到場協助，並提供
-              24 小時緊急處理服務，讓您免除後顧之憂。
+              設備齊全、技術成熟，無論是居家修繕或商家、機關的定期合作，我們皆能迅速應對、有效解決問題。
+              堅持合理收費、誠信服務，一通電話即可到場協助，並提供 24 小時緊急處理服務，讓您免除後顧之憂。
               <strong>「亦傑包通專家，值得信賴的在地水電好幫手。」</strong>
             </p>
             <!-- social icon -->
@@ -114,21 +115,21 @@
             </ul>
           </div>
           <div class="col-lg-5">
-            <div class="contact-info d-flex justify-content-center flex-column gap-4 h-100">
+            <div class="d-flex justify-content-center flex-column gap-4 h-100">
               <!-- Working Hours -->
               <div class="d-flex align-items-start gap-3">
-                <i class="bi bi-clock fs-4 text-primary"></i>
-                <div>
-                  <p class="text-primary fw-bold mb-1 small">WORKING HOURS</p>
+                <i class="bi bi-clock fs-3 text-primary"></i>
+                <div class="about-text">
+                  <p class="text-primary fw-bold mb-1">WORKING HOURS</p>
                   <p class="fw-bold mb-0">24 小時</p>
                 </div>
               </div>
 
               <!-- Call Us -->
               <div class="d-flex align-items-start gap-3">
-                <i class="bi bi-telephone fs-4 text-primary"></i>
-                <div>
-                  <p class="text-primary fw-bold mb-1 small">CALL US</p>
+                <i class="bi bi-telephone fs-3 text-primary"></i>
+                <div class="about-text">
+                  <p class="text-primary fw-bold mb-1 small">CALL US / 點電話可直接播通</p>
                   <p class="fw-bold mb-0">
                     <a href="tel:+0955071230"
                       aria-label="0955071230">
@@ -140,14 +141,14 @@
 
               <!-- Address -->
               <div class="d-flex align-items-start gap-3">
-                <i class="bi bi-building fs-4 text-primary"></i>
-                <div>
+                <i class="bi bi-building fs-3 text-primary"></i>
+                <div class="about-text">
                   <p class="text-primary fw-bold mb-1 small">ADDRESS</p>
                   <p class="fw-bold mb-0">高雄市楠梓區土庫八街 297 號</p>
                 </div>
               </div>
             </div>
-            <!-- social icon -->
+            <!-- social icon mobile-->
             <ul class="d-flex d-lg-none about-social">
               <li class="pe-4">
                 <a href="https://www.google.com/url?q=https%3A%2F%2Fline.me%2Fti%2Fp%2FcpxNoEmFf8&sa=D&sntz=1&usg=AOvVaw0LpE5xN1Jxz6ct_rFMZSOw"
@@ -389,6 +390,7 @@
               class="svg-qr" />
             </a>
           </div>
+          <p>點電話直接撥通、點 QR Code 立即加 Line，歡迎隨時聯絡</p>
         </div>
       </div>
     </section>
