@@ -129,7 +129,7 @@
               <div class="d-flex align-items-start gap-3">
                 <i class="bi bi-telephone fs-3 text-primary"></i>
                 <div class="about-text">
-                  <p class="text-primary fw-bold mb-1 small">CALL US / 點電話可直接播通</p>
+                  <p class="text-primary fw-bold mb-1">CALL US / 點電話可直接播通</p>
                   <p class="fw-bold mb-0">
                     <a href="tel:+0955071230"
                       aria-label="0955071230">
@@ -143,7 +143,7 @@
               <div class="d-flex align-items-start gap-3">
                 <i class="bi bi-building fs-3 text-primary"></i>
                 <div class="about-text">
-                  <p class="text-primary fw-bold mb-1 small">ADDRESS</p>
+                  <p class="text-primary fw-bold mb-1">ADDRESS</p>
                   <p class="fw-bold mb-0">高雄市楠梓區土庫八街 297 號</p>
                 </div>
               </div>
