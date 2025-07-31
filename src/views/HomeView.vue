@@ -465,12 +465,45 @@ export default {
       heroImage,
       heroSubtitleImage: heroSubtitleDesktop,
       emergencyImage,
+      hasTrackedConversion: false,
     };
   },
   mounted() {
     if (window.innerWidth < 768) {
       this.heroSubtitleImage = heroSubtitleMobile;
     }
+    // 結合時間和滾動
+    this.setupSimpleTracking();
+  },
+  methods: {
+    setupSimpleTracking() {
+      // 15 秒後如果還沒觸發轉換，就觸發
+      const timeoutId = setTimeout(() => {
+        if (!this.hasTrackedConversion) {
+          this.trackConversion('time_based');
+        }
+      }, 15000);
+      // 滾動到 30% 時觸發（較早觸發）
+      const handleScroll = () => {
+        const scrollPercent = Math.round(
+          (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100,
+        );
+        if (scrollPercent >= 30 && !this.hasTrackedConversion) {
+          clearTimeout(timeoutId); // 清除時間觸發
+          this.trackConversion('scroll_engagement');
+          window.removeEventListener('scroll', handleScroll);
+        }
+      };
+      window.addEventListener('scroll', handleScroll);
+    },
+    trackConversion() {
+      if (window.gtag && !this.hasTrackedConversion) {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-1729894791/teSiCKjk2vsaENee5rhA',
+        });
+        this.hasTrackedConversion = true;
+      }
+    },
   },
 };
 </script>
