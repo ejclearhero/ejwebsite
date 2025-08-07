@@ -472,38 +472,131 @@ export default {
     if (window.innerWidth < 768) {
       this.heroSubtitleImage = heroSubtitleMobile;
     }
-    // 結合時間和滾動
-    this.setupSimpleTracking();
+    // 確保 Google 代碼已載入後再設置追蹤
+    this.ensureGoogleTagLoaded(() => {
+      this.setupTracking();
+    });
   },
   methods: {
-    setupSimpleTracking() {
+    // 確保 Google Tag 已載入
+    ensureGoogleTagLoaded(callback) {
+      if (window.gtag && window.dataLayer) {
+        callback();
+        return;
+      }
+
+      // 等待 Google Tag 載入
+      let attempts = 0;
+      const maxAttempts = 50;
+      const checkInterval = setInterval(() => {
+        attempts += 1;
+        if (window.gtag && window.dataLayer) {
+          clearInterval(checkInterval);
+          callback();
+        } else if (attempts >= maxAttempts) {
+          clearInterval(checkInterval);
+          console.warn('Google Tag 載入超時');
+        }
+      }, 100);
+    },
+
+    setupTracking() {
+      // 發送頁面瀏覽事件（對 Analytics 和 Ads 都重要）
+      this.sendPageView();
+
+      // 設置轉換追蹤
+      this.setupConversionTracking();
+    },
+
+    // 發送頁面瀏覽事件
+    sendPageView() {
+      if (window.gtag) {
+        // 為 Google Analytics 發送頁面瀏覽
+        window.gtag('config', 'G-H6FJWT5HT5', {
+          page_title: document.title,
+          page_location: window.location.href,
+          page_path: this.$route.path,
+        });
+
+        // 為 Google Ads 發送頁面瀏覽
+        window.gtag('config', 'AW-1729894791', {
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+
+        // console.log('頁面瀏覽事件已發送到 GA4 和 Google Ads');
+      }
+    },
+
+    setupConversionTracking() {
       // 15 秒後如果還沒觸發轉換，就觸發
       const timeoutId = setTimeout(() => {
         if (!this.hasTrackedConversion) {
           this.trackConversion('time_based');
         }
       }, 15000);
-      // 滾動到 30% 時觸發（較早觸發）
+
+      // 滾動到 30% 時觸發
       const handleScroll = () => {
         const scrollPercent = Math.round(
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100,
         );
         if (scrollPercent >= 30 && !this.hasTrackedConversion) {
-          clearTimeout(timeoutId); // 清除時間觸發
+          clearTimeout(timeoutId);
           this.trackConversion('scroll_engagement');
           window.removeEventListener('scroll', handleScroll);
         }
       };
+
       window.addEventListener('scroll', handleScroll);
+
+      // 儲存 handleScroll 參考以便後續清理
+      this.handleScroll = handleScroll;
     },
-    trackConversion() {
+
+    trackConversion(source = 'manual') {
       if (window.gtag && !this.hasTrackedConversion) {
+        // console.log(`觸發轉換追蹤: ${source}`);
+
+        // 發送 Google Ads 轉換事件
         window.gtag('event', 'conversion', {
           send_to: 'AW-1729894791/teSiCKjk2vsaENee5rhA',
+          event_callback: () => {
+            // console.log('Google Ads 轉換追蹤已發送');
+          },
+          event_timeout: 2000,
         });
+
+        // 同時發送 Google Analytics 自定義事件
+        window.gtag('event', 'conversion_action', {
+          event_category: 'engagement',
+          event_label: source,
+          value: 1,
+        });
+
         this.hasTrackedConversion = true;
       }
     },
+
+    // 追蹤特定互動事件（可選）
+    trackButtonClick(buttonName) {
+      if (window.gtag) {
+        // Google Analytics 事件
+        window.gtag('event', 'click', {
+          event_category: 'button',
+          event_label: buttonName,
+        });
+
+        // console.log(`按鈕點擊事件已追蹤: ${buttonName}`);
+      }
+    },
+  },
+
+  // 在組件銷毀時清理事件監聽器
+  beforeUnmount() {
+    if (this.handleScroll) {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
   },
 };
 </script>

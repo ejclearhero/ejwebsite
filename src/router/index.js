@@ -13,4 +13,14 @@ const router = createRouter({
   routes,
 });
 
+router.afterEach((to) => {
+  if (window.gtag) {
+    window.gtag('config', 'G-H6FJWT5HT5', {
+      page_path: to.path,
+      page_title: to.meta?.title || document.title,
+      page_location: window.location.href,
+    });
+  }
+});
+
 export default router;
