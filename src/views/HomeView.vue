@@ -560,7 +560,7 @@ export default {
 
         // 發送 Google Ads 轉換事件
         window.gtag('event', 'conversion', {
-          send_to: 'AW-1729894791/teSiCKjk2vsaENee5rhA',
+          send_to: 'AW-17298984791/teSiCKjk2vsaENee5rhA',
           event_callback: () => {
             // console.log('Google Ads 轉換追蹤已發送');
           },
