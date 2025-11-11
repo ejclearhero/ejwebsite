@@ -3,9 +3,11 @@
   class="navbar navbar-expand-lg bg-white border-bottom shadow fixed-top">
     <div class="container">
       <!-- LOGO -->
-      <router-link to="/">
-      <img src="@/assets/images/logo_gray.svg" alt="Logo" class="logo-img">
-      </router-link>
+      <h1>
+        <router-link to="/" title="亦傑包通專家">
+        <img src="@/assets/images/logo_gray.svg" alt="Logo" class="logo-img">
+        </router-link>
+      </h1>
       <!-- <a class="navbar-brand" href="#">
         <img src="@/assets/images/logo_gray.svg" alt="Logo" class="logo-img">
       </a> -->

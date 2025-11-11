@@ -58,8 +58,8 @@
       <div class="container">
         <div class="row row-gap-4">
           <div class="col-lg-7">
-            <h3 class="section-title">關於亦傑包通專家</h3>
-            <h4 class="text-body text-secondary mb-4">EJclearhreo</h4>
+            <h2 class="section-title">關於亦傑包通專家</h2>
+            <h3 class="text-body text-secondary mb-4">EJclearhreo</h3>
             <p class="about-text mb-3 mb-lg-4">
               亦傑企業行為政府立案的專業水電工程行，亦以品牌名稱「亦傑包通專家」對外服務，
               擁有多年實務經驗，專精於高壓水刀管路疏通清洗、內視鏡管路檢測、水電維修、化糞池清理與各類衛浴工程。
@@ -199,7 +199,7 @@
     <!-- 服務流程 -->
     <section id="serviceFlow" class="service-flow py-9">
       <div class="container">
-        <h3 class="section-title text-center mb-9">服務流程</h3>
+        <h2 class="section-title text-center mb-9">服務流程</h2>
         <!-- g-4 -->
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4  justify-content-center
         row-gap-8 row-gap-md-6">
@@ -246,14 +246,14 @@
     <!-- 服務項目 -->
     <section id="serviceItem" class="bg-gray-100 py-9">
       <div class="container">
-        <h3 class="section-title text-center mb-6">服務項目</h3>
+        <h2 class="section-title text-center mb-6">服務項目</h2>
         <ul class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-gap-4">
           <li class="col">
             <div class="card">
               <img src="@/assets/images/serviceItem/serviceItem-高壓水刀管路疏通_01.webp"
               class="card-img-top object-position-tc" alt="高壓水刀管路疏通圖片">
               <div class="card-body">
-                <h5 class="card-title">高壓水刀管路疏通</h5>
+                <h4 class="card-title">高壓水刀管路疏通</h4>
                 <p class="card-text">
                   利用高壓水流沖刷堵塞物，有效清除油垢、泥沙與髒污，恢復管線暢通。
                 </p>
@@ -266,7 +266,7 @@
               <img src="@/assets/images/serviceItem/serviceItem-排水孔疏通.webp"
               class="card-img-top" alt="排水孔疏通圖片">
               <div class="card-body">
-                <h5 class="card-title">排水孔疏通</h5>
+                <h4 class="card-title">排水孔疏通</h4>
                 <p class="card-text">
                   針對廚房、浴室等排水不順，快速排除堵塞，避免積水與異味困擾。
                 </p>
@@ -279,7 +279,7 @@
               <img src="@/assets/images/serviceItem/serviceItem-馬桶疏通_01.webp"
               class="card-img-top object-position-tc" alt="馬桶疏通圖片">
               <div class="card-body">
-                <h5 class="card-title">馬桶疏通</h5>
+                <h4 class="card-title">馬桶疏通</h4>
                 <p class="card-text">
                   解決馬桶阻塞、水流緩慢等問題，還您一個順暢如新的如廁體驗。
                 </p>
@@ -292,7 +292,7 @@
               <img src="@/assets/images/serviceItem/serviceItem-內視鏡管檢測_01.webp"
               class="card-img-top" alt="內視鏡管檢測圖片">
               <div class="card-body">
-                <h5 class="card-title">內視鏡管檢測</h5>
+                <h4 class="card-title">內視鏡管檢測</h4>
                 <p class="card-text">
                   使用專業內視鏡深入管道檢查，精準找出堵塞點與破損狀況。
                 </p>
@@ -305,7 +305,7 @@
               <img src="@/assets/images/serviceItem/serviceItem-衛浴廁所改修.webp"
               class="card-img-top" alt="衛浴廁所改修圖片">
               <div class="card-body">
-                <h5 class="card-title">衛浴廁所改修</h5>
+                <h4 class="card-title">衛浴廁所改修</h4>
                 <p class="card-text">
                   提供老舊衛浴空間更新、管線重配與馬桶更換等改修工程。
                 </p>
@@ -318,7 +318,7 @@
               <img src="@/assets/images/serviceItem/serviceItem-截油槽清理.webp"
               class="card-img-top" alt="截油槽清理圖片">
               <div class="card-body">
-                <h5 class="card-title">截油槽清理</h5>
+                <h4 class="card-title">截油槽清理</h4>
                 <p class="card-text">
                   清除截油槽內部油脂、殘渣，預防異味與堵塞，符合環保規範。
                 </p>
@@ -331,7 +331,7 @@
               <img src="@/assets/images/serviceItem/serviceItem-化糞池清理.webp"
               class="card-img-top" alt="化糞池清理圖片">
               <div class="card-body">
-                <h5 class="card-title">化糞池清理</h5>
+                <h4 class="card-title">化糞池清理</h4>
                 <p class="card-text">
                   定期抽除污泥，保持化糞池運作順暢，避免外溢與臭味產生。
                 </p>
@@ -344,7 +344,7 @@
               <img src="@/assets/images/serviceItem/serviceItem-污水人孔蓋更換.webp"
               class="card-img-top" alt="污水人孔蓋更換圖片">
               <div class="card-body">
-                <h5 class="card-title">污水人孔蓋更換</h5>
+                <h4 class="card-title">污水人孔蓋更換</h4>
                 <p class="card-text">
                   更換破損或老化的人孔蓋，維護行人安全與污水系統運作。
                 </p>
