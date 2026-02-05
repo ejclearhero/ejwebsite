@@ -440,7 +440,7 @@
           </a>
         </li>
       </ul>
-      <p class="text-sm text-white">© 2025 亦傑包通專家，保留所有權利</p>
+      <p class="text-sm text-white">&copy; {{ currentYear }} 亦傑包通專家，保留所有權利</p>
     </div>
   </footer>
 </template>
@@ -466,6 +466,7 @@ export default {
       heroSubtitleImage: heroSubtitleDesktop,
       emergencyImage,
       hasTrackedConversion: false,
+      currentYear: new Date().getFullYear(),
     };
   },
   mounted() {
